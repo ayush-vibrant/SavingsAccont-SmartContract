@@ -19,7 +19,7 @@ contract Savings {
     }
 
 
-    function withdraw() public onlyOwner { // can only withdraw after a certin period of time.
+    function withdraw() public onlyOwner { // allow withdrwal only after specified time.
         require(now >= till);
         msg.sender.transfer(address(this).balance);
     }
